@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="rateModel"
+            type="revoult.test.maulik.model.Rate">
+
+        </variable>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivCountryFlag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@mipmap/ic_eur_flag"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtCurrencySymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/ivCountryFlag"
+            android:text="EUR"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/ivCountryFlag"
+            app:layout_constraintTop_toTopOf="@+id/ivCountryFlag" />
+
+        <TextView
+            android:id="@+id/txtCurrencyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Euro"
+            android:textColor="#919294"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/txtCurrencySymbol"
+            app:layout_constraintTop_toBottomOf="@+id/txtCurrencySymbol" />
+
+        <EditText
+            android:id="@+id/txtCurrencyAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:text="1.00"
+            android:hint="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:maxWidth="150dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
